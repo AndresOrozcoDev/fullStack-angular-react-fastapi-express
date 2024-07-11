@@ -1,0 +1,6 @@
+[submodule "angular-16-dashboard"]
+	path = angular-16-dashboard
+	url = https://github.com/AndresOrozcoDev/angular-16-dashboard.git
+[submodule "fastapi-dashboard"]
+	path = fastapi-dashboard
+	url = https://github.com/AndresOrozcoDev/fastapi-dashboard.git
