@@ -33,7 +33,7 @@ services:
             RABBITMQ_CREDENTIALS_USER: guest
             RABBITMQ_CREDENTIALS_PASSWORD: guest
             API_KEY: development
-            BACKEND_URL: http://backend:8000
+            BACKEND_URL: backend
         networks:
             - net-market
 
