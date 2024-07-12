@@ -4,3 +4,6 @@
 [submodule "fastapi-dashboard"]
 	path = fastapi-dashboard
 	url = https://github.com/AndresOrozcoDev/fastapi-dashboard.git
+[submodule "express-dashboard"]
+	path = express-dashboard
+	url = https://github.com/AndresOrozcoDev/express-dashboard.git
