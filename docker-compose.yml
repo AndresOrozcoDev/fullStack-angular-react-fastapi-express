@@ -33,16 +33,16 @@ services:
             RABBITMQ_CREDENTIALS_USER: guest
             RABBITMQ_CREDENTIALS_PASSWORD: guest
             API_KEY: development
-            BACKEND_URL: backend
+            BACKEND_URL: fastapi
         networks:
             - net-market
 
-    backend:
-        image: backend
+    fastapi:
+        image: fastapi
         build:
             context: ./fastapi-dashboard
             dockerfile: Dockerfile
-        container_name: container_backend
+        container_name: container_fastapi
         ports:
             - "8000:80"
         environment:
@@ -55,6 +55,22 @@ services:
             EMAIL_PORT: 587
             EMAIL_USERNAME: development_market@hotmail.com
             EMAIL_PASSWORD: Development
+        networks:
+            - net-market
+
+    express:
+        image: express
+        build:
+            context: ./express-dashboard
+            dockerfile: Dockerfile
+        container_name: container_express
+        ports:
+            - "3000:80"
+        environment:
+            RABBITMQ_HOST: rabbit
+            RABBITMQ_PORT: 5672
+            RABBITMQ_CREDENTIALS_USER: guest
+            RABBITMQ_CREDENTIALS_PASSWORD: guest
         networks:
             - net-market
 
