@@ -16,6 +16,14 @@ Run the next command for a dev server. Navigate to `http://localhost:4200/` for 
 docker-compose up
 ```
 
+## Code scaffolding
+
+Run the next command for update modules.
+
+```bash
+git submodule update --remote
+```
+
 ## Author
 
 - [@AndresOrozcoDev](https://github.com/AndresOrozcoDev)
