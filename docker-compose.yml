@@ -18,3 +18,44 @@ services:
             retries: 3
         networks:
             - net-market
+
+    frontend:
+        image: frontend
+        build:
+            context: ./angular-16-dashboard
+            dockerfile: Dockerfile
+        container_name: container_frontend
+        ports:
+            - "4200:80"
+        environment:
+            RABBITMQ_HOST: rabbit
+            RABBITMQ_PORT: 5672
+            RABBITMQ_CREDENTIALS_USER: guest
+            RABBITMQ_CREDENTIALS_PASSWORD: guest
+            API_KEY: development
+        networks:
+            - net-market
+
+    backend:
+        image: backend
+        build:
+            context: ./fastapi-dashboard
+            dockerfile: Dockerfile
+        container_name: container_backend
+        ports:
+            - "8000:80"
+        environment:
+            RABBITMQ_HOST: rabbit
+            RABBITMQ_PORT: 5672
+            RABBITMQ_CREDENTIALS_USER: guest
+            RABBITMQ_CREDENTIALS_PASSWORD: guest
+            API_KEY: development
+            EMAIL_SERVER: smtp.office365.com
+            EMAIL_PORT: 587
+            EMAIL_USERNAME: development_market@hotmail.com
+            EMAIL_PASSWORD: Development
+        networks:
+            - net-market
+
+networks:
+    net-market:
