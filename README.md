@@ -24,6 +24,10 @@ Run the next command for update modules.
 git submodule update --remote
 ```
 
+## Tecnology stack
+
+![Tecnology stack](./sources/Technology%20stack%20Market.jpg)
+
 ## Author
 
 - [@AndresOrozcoDev](https://github.com/AndresOrozcoDev)
