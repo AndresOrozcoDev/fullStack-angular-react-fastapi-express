@@ -30,4 +30,4 @@ git submodule update --remote
 
 ## Author
 
-- [@AndresOrozcoDev](https://github.com/AndresOrozcoDev)
+[@AndresOrozcoDev](https://github.com/AndresOrozcoDev)

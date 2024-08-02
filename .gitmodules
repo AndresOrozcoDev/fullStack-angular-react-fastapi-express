@@ -7,3 +7,6 @@
 [submodule "express-dashboard"]
 	path = express-dashboard
 	url = https://github.com/AndresOrozcoDev/express-dashboard.git
+[submodule "react-18-dashboard"]
+	path = react-18-dashboard
+	url = https://github.com/AndresOrozcoDev/react-18-dashboard.git
