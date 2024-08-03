@@ -20,11 +20,11 @@ services:
             - net-market
 
     frontend:
-        image: frontend
+        image: angular
         build:
             context: ./angular-16-dashboard
             dockerfile: Dockerfile
-        container_name: container_frontend
+        container_name: container_angular
         ports:
             - "4200:80"
         environment:
@@ -33,7 +33,26 @@ services:
             RABBITMQ_CREDENTIALS_USER: guest
             RABBITMQ_CREDENTIALS_PASSWORD: guest
             API_KEY: development
-            BACKEND_URL: fastapi
+            BACKEND_URL_FASTAPI: fastapi
+            BACKEND_URL_EXPRESS: express
+        networks:
+            - net-market
+
+    raect:
+        image: react
+        build:
+            context: ./react-18-dashboard
+            dockerfile: Dockerfile
+        container_name: container_react
+        ports:
+            - "3200:3000"
+        environment:
+            RABBITMQ_HOST: rabbit
+            RABBITMQ_PORT: 5672
+            RABBITMQ_CREDENTIALS_USER: guest
+            RABBITMQ_CREDENTIALS_PASSWORD: guest
+            API_KEY: development
+            BACKEND_URL_FASTAPI: fastapi
             BACKEND_URL_EXPRESS: express
         networks:
             - net-market
