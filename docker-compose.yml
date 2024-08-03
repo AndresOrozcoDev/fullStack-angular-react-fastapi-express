@@ -19,7 +19,7 @@ services:
         networks:
             - net-market
 
-    frontend:
+    angular:
         image: angular
         build:
             context: ./angular-16-dashboard
@@ -38,7 +38,7 @@ services:
         networks:
             - net-market
 
-    raect:
+    react:
         image: react
         build:
             context: ./react-18-dashboard
