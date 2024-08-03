@@ -10,7 +10,15 @@ Make sure you have the following programs installed before running the applicati
 
 ## Development server
 
-Run the next command for a dev server. Navigate to `http://localhost:4200/` for Frontend, `http://localhost:8000/` for Backend and `http://localhost:15672/` for RabbitMQ. The application will automatically reload if you change any of the source files.
+Run the next command for a dev server:
+
+```bash
+`http://localhost:4200/` for miniFrontend Angular
+`http://localhost:3200/` for miniFrontend React
+`http://localhost:8000/` for Backend FastAPI
+`http://localhost:3000/` for Backend Express
+`http://localhost:15672/` for RabbitMQ.
+```
 
 ```bash
 docker-compose up
