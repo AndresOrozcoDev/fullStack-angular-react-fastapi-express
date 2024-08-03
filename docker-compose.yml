@@ -26,7 +26,7 @@ services:
             dockerfile: Dockerfile
         container_name: container_angular
         ports:
-            - "4200:80"
+            - "4200:4200"
         environment:
             RABBITMQ_HOST: rabbit
             RABBITMQ_PORT: 5672
@@ -64,7 +64,7 @@ services:
             dockerfile: Dockerfile
         container_name: container_fastapi
         ports:
-            - "8000:80"
+            - "8000:8000"
         environment:
             RABBITMQ_HOST: rabbit
             RABBITMQ_PORT: 5672
@@ -85,7 +85,7 @@ services:
             dockerfile: Dockerfile
         container_name: container_express
         ports:
-            - "3000:80"
+            - "3005:3005"
         environment:
             RABBITMQ_HOST: rabbit
             RABBITMQ_PORT: 5672
