@@ -26,7 +26,7 @@ services:
             dockerfile: Dockerfile
         container_name: container_angular
         ports:
-            - "4200:4200"
+            - "4200:80"
         environment:
             RABBITMQ_HOST: rabbit
             RABBITMQ_PORT: 5672
@@ -45,7 +45,7 @@ services:
             dockerfile: Dockerfile
         container_name: container_react
         ports:
-            - "3200:3000"
+            - "3000:3000"
         environment:
             RABBITMQ_HOST: rabbit
             RABBITMQ_PORT: 5672
